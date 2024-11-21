@@ -1,0 +1,131 @@
+:root {
+    --main-color: #780000;
+    --add-main-color: #C1121F;
+    --accent-color: #669BBC;
+}
+
+@font-face {
+    font-family: "Garamond";
+    src: url("/static/fonts/Garamond.ttf");
+}
+
+@font-face {
+    font-family: "Lorenzo";
+    src: url("/static/fonts/Lorenzo.ttf");
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    font-family: "Lorenzo";
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 60px;
+    border-bottom: solid 3px var(--main-color);
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    gap: 80px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Garamond";
+}
+
+.title {
+    font-size: 20px;
+    font-family: "Garamond";
+}
+
+.link {
+    font-family: 16px;
+    font-family: "Lorenzo";
+    color: var(--main-color);
+    transition: 200ms;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: var(--add-main-color);
+}
+
+.link:active {
+    color: var(--accent-color);
+}
+
+.top-panel {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu {
+    display: flex;
+    gap: 50px;
+}
+
+.top-menu__btn {
+    transition: 200ms;
+}
+
+.top-menu__btn:hover {
+    color: var(--add-main-color);
+}
+
+.top-menu__btn:active {
+    color: var(--accent-color);
+}
+
+.auth {
+    display: flex;
+    gap: 30px;
+}
+
+.wrap {
+    display: flex;
+    flex-grow: 1;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+footer {
+    height: 90px;
+    border-top: solid 3px var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.bottom-menu {
+    display: flex;
+    gap: 30px;
+}

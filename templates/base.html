@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/base.css">
+    {% block css %}{% endblock %}
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Learn-Russian</h1>
+
+        <div class="top-panel">
+            <nav class="top-menu">
+                <a href="" class="top-menu__btn title">Главная</a>
+                <a href="" class="top-menu__btn title">Содержание</a>
+                <a href="" class="top-menu__btn title">Тест знаний</a>
+                <a href="" class="top-menu__btn title">Обратная связь</a>
+            </nav>
+    
+            <div class="auth">
+                {% if user.is_authenticated %}
+                    <a href="" class="btn-account">
+                        <img src="/static/img/user.png" alt="user" class="btn-account__img">
+                    </a>
+                {% else %}
+                    <a href="" class="link">Войти</a>
+                    <a href="" class="link">Регистрация</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+    
+    <div class="wrap">
+        {% block aside %}{% endblock %}
+
+        <main>
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+
+            <footer>
+                <p class="copyright">Все права защищены</p>
+        
+                <nav class="bottom-menu">
+                    <a href="" class="bottom-menu__btn link">Обратная связь</a>
+                    <a href="" class="bottom-menu__btn link">О проекте</a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+    
+    {% block js %}{% endblock %}
+</body>
+</html>
