@@ -1,9 +1,11 @@
+/* Переменные */
 :root {
     --main-color: #780000;
     --add-main-color: #C1121F;
     --accent-color: #669BBC;
 }
 
+/* Шрифты */
 @font-face {
     font-family: "Garamond";
     src: url("/static/fonts/Garamond.ttf");
@@ -14,6 +16,7 @@
     src: url("/static/fonts/Lorenzo.ttf");
 }
 
+/* Сброс стилей */
 *,
 *::after,
 *::before {
@@ -36,15 +39,7 @@ body {
     flex-direction: column;
 }
 
-header {
-    height: 60px;
-    border-bottom: solid 3px var(--main-color);
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
-    gap: 80px;
-}
-
+/* Типографика */
 .logo {
     font-size: 30px;
     font-weight: bold;
@@ -54,6 +49,11 @@ header {
 .title {
     font-size: 20px;
     font-family: "Garamond";
+}
+
+.title_page {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .link {
@@ -70,6 +70,21 @@ header {
 
 .link:active {
     color: var(--accent-color);
+}
+
+.text {
+    line-height: 150%;
+    margin-bottom: 10px;
+}
+
+/* Шапка */
+header {
+    height: 60px;
+    border-bottom: solid 3px var(--main-color);
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    gap: 80px;
 }
 
 .top-panel {
@@ -101,6 +116,7 @@ header {
     gap: 30px;
 }
 
+/* Контент */
 .wrap {
     display: flex;
     flex-grow: 1;
@@ -110,19 +126,25 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .content {
     flex-grow: 1;
+    padding: 30px 0;
+    max-width: 800px;
 }
 
+/* Подвал */
 footer {
     height: 90px;
+    width: 100%;
     border-top: solid 3px var(--main-color);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 80px;
+
 }
 
 .bottom-menu {
