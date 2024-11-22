@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Lesson (models.Model):
+    title = models.CharField("Название", max_length=150)
+    date = models.DateField("Дата обновления", auto_now=True, auto_created=True)
+    
