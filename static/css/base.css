@@ -3,6 +3,7 @@
     --main-color: #780000;
     --add-main-color: #C1121F;
     --accent-color: #669BBC;
+    --bg-color: #F9F9F9;
 }
 
 /* Шрифты */
@@ -150,4 +151,22 @@ footer {
 .bottom-menu {
     display: flex;
     gap: 30px;
+}
+
+/* Кнопки и элементы управления */
+.main-btn {
+    padding: 1em 1.5em;
+    background-color: var(--add-main-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: 200ms;
+}
+
+.main-btn:hover {
+    background-color: var(--main-color);
+}
+
+.main-btn:active {
+    background-color: var(--accent-color);
 }

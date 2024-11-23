@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css//forms.css">
     {% block css %}{% endblock %}
     <title>
         {% block title %}{% endblock %}
@@ -27,8 +28,8 @@
                         <img src="/static/img/user.png" alt="user" class="btn-account__img">
                     </a>
                 {% else %}
-                    <a href="" class="link">Войти</a>
-                    <a href="" class="link">Регистрация</a>
+                    <a href="{% url 'login' %}" class="link">Войти</a>
+                    <a href="{% url 'registration' %}" class="link">Регистрация</a>
                 {% endif %}
             </div>
         </div>
