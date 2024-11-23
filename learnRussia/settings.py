@@ -126,6 +126,12 @@ STATIC_ROOT = "staticfiles"
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+
+# Аутентификация
+LOGIN_REDIRECT_URL = "/user/account/"
+LOGIN_URL = "/user/login/"
+LOGOUT_REDIRECT_URL = "/"
+
 customColorPalette = [
         {
             'color': 'hsl(4, 90%, 58%)',
