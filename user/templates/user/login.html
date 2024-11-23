@@ -5,23 +5,5 @@
 {% endblock %}
 
 {% block content %}
-    <div class="wrap-from">
-        <div class="window-form">
-            <h2 class="title title_form">Вход</h2>
-    
-            <form method="post" class="form-layout">
-                {% csrf_token %}
-    
-                {% for field in form %}
-                    <div class="form-field">
-                        {{ field.label_tag }}
-                        {{ field }}
-                        {{ field.errors }}
-                    </div>
-                {% endfor %}
-
-                <input type="submit" value="Войти" class="main-btn">
-            </form>
-        </div>
-    </div>
+    {% include 'components/form.html' with title='Вход' submit='Войти' %}
 {% endblock %}
