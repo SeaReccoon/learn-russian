@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Learn-Russian. Оставить отзыв
+{% endblock %}
+
+{% block content %}
+    {% include 'components/form.html' with title='Написать отзыв' submit='Отправить' %}
+{% endblock %}

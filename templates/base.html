@@ -19,7 +19,7 @@
                 <a href="{% url 'index' %}" class="top-menu__btn title">Главная</a>
                 <a href="" class="top-menu__btn title">Содержание</a>
                 <a href="" class="top-menu__btn title">Тест знаний</a>
-                <a href="" class="top-menu__btn title">Обратная связь</a>
+                <a href="{% url 'feedback' %}" class="top-menu__btn title">Обратная связь</a>
             </nav>
     
             <div class="auth">
@@ -51,7 +51,7 @@
                 <p class="copyright">Все права защищены</p>
         
                 <nav class="bottom-menu">
-                    <a href="" class="bottom-menu__btn link">Обратная связь</a>
+                    <a href="{% url 'feedback' %}" class="bottom-menu__btn link">Обратная связь</a>
                     <a href="" class="bottom-menu__btn link">О проекте</a>
                 </nav>
             </footer>
