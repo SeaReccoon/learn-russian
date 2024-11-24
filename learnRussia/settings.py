@@ -132,6 +132,14 @@ LOGIN_REDIRECT_URL = "/user/account/"
 LOGIN_URL = "/user/login/"
 LOGOUT_REDIRECT_URL = "/"
 
+# Электронная почта
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'learn.russian.feedback@gmail.com'
+EMAIL_HOST_PASSWORD = 'passwordLearnRussia'
+EMAIL_USE_TLS = True
+
+# ckeditor
 customColorPalette = [
         {
             'color': 'hsl(4, 90%, 58%)',
