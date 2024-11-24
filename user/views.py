@@ -1,4 +1,4 @@
-from django.views.generic import DetailView, CreateView
+from django.views.generic import DetailView, CreateView, UpdateView
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LoginView
@@ -39,3 +39,12 @@ class AccountView(DetailView):
         }
         context["fields"] = fields
         return context
+    
+class UpdateAccountView(UpdateView):
+    model = User
+    template_name = "user/update.html"
+    fields = ["first_name", "last_name", "email"]
+
+    def get_success_url(self):
+        return getCurrentAccount(self.request)
+
