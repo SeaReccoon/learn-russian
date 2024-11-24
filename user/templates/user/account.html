@@ -1,9 +1,37 @@
 {% extends 'base.html' %}
 
+{% block css %}
+    <link rel="stylesheet" href="/static/user/css/account.css">
+{% endblock %}
+
 {% block title %}
     Learn-Russian. Личный кабинет
 {% endblock %}
 
 {% block content %}
-    <h2 class="title">Личный кабинет</h2>
+    <h2 class="title title_page">Личный кабинет</h2>
+
+    <div class="detail-account">
+        {% for label, val in fields.items %}
+            <p class="line">
+                <span class="sub-title sub-title_accent">{{ label }}:</span>
+
+                <span class="line__value">
+                    {% if val %}
+                        {{ val }}
+                    {% else %}
+                        Не указано
+                    {% endif %}
+                </span>
+            </p>
+        {% endfor %}
+    </div>
+
+    <div class="account-control">
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <input type="submit" value="Выйти" class="main-btn">
+        </form>
+        <a href="" class="main-btn">Редактировать</a>
+    </div>
 {% endblock %}

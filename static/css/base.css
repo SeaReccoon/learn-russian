@@ -52,6 +52,11 @@ body {
     font-family: "Garamond";
 }
 
+.sub-title {
+    font-size: 18px;
+    font-family: "Garamond";
+}
+
 .title_page {
     margin-top: 20px;
     margin-bottom: 10px;

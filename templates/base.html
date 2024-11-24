@@ -24,7 +24,7 @@
     
             <div class="auth">
                 {% if user.is_authenticated %}
-                    <a href="" class="btn-account">
+                    <a href="{% url 'account' user.pk %}" class="btn-account">
                         <img src="/static/img/user.png" alt="user" class="btn-account__img">
                     </a>
                 {% else %}
