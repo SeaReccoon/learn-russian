@@ -24,6 +24,10 @@
     
             <div class="auth">
                 {% if user.is_authenticated %}
+                    {% if user.is_staff %}
+                        <a href="/admin" class="add-btn">Панель админа</a>
+                    {% endif %}
+
                     <a href="{% url 'account' user.pk %}" class="btn-account">
                         <img src="/static/img/user.png" alt="user" class="btn-account__img">
                     </a>

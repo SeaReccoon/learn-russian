@@ -119,6 +119,7 @@ header {
 
 .auth {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
@@ -173,5 +174,22 @@ footer {
 }
 
 .main-btn:active {
+    background-color: var(--accent-color);
+}
+
+.add-btn {
+    padding: 0.5em 1em;
+    border: 2px solid var(--add-main-color);
+    border-radius: 10px;
+    transition: 200ms;
+}
+
+.add-btn:hover {
+    background-color: var(--add-main-color);
+    color: white
+}
+
+.add-btn:active {
+    border-color: var(--accent-color);
     background-color: var(--accent-color);
 }
