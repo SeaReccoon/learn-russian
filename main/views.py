@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView, CreateView
 from main.models import Feedback
 from django.urls import reverse
@@ -10,7 +11,7 @@ def email(subject, content):
 class IndexView (TemplateView):
     template_name = "main/index.html"
 
-class FeedbackView (CreateView):
+class FeedbackView (LoginRequiredMixin, CreateView):
     model = Feedback
     template_name = "main/feedback.html"
     fields = ["text",]
