@@ -6,10 +6,12 @@
 
 {% block content %}
     <h2 class="title title_page">Отзыв успешно отправлен</h2>
-    
+
     <p class="text">
         Благодарим вас за оставленный отзыв. Наши администрация просмотрит ваше письмо в течение трех дней и ответит на все интересующие вас вопросы
     </p>
 
-    <a href="{% url 'index' %}" class="main-btn">Вернуться на главную</a>
+    <div class="btns">
+        <a href="{% url 'index' %}" class="main-btn main-btn_center">Вернуться на главную</a>
+    </div>
 {% endblock %}
