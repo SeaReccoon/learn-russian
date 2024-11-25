@@ -5,6 +5,8 @@ class Lesson (models.Model):
     title = models.CharField("Название", max_length=150)
     date = models.DateField("Дата обновления", auto_now=True, auto_created=True)
     content = CKEditor5Field("Содержимое")
+    category = models.CharField("Категория", max_length=120, null=True, blank=True)
+    number = models.IntegerField("Номер занятия", null=True, blank=True)
 
     def __str__(self):
         return self.title
