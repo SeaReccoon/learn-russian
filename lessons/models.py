@@ -9,8 +9,9 @@ class Lesson (models.Model):
     number = models.IntegerField("Номер занятия", null=True, blank=True)
 
     def __str__(self):
-        return self.title
+        return f"{self.category}. Урок {self.number}. {self.title}"
     
     class Meta:
         verbose_name = "Урок"
         verbose_name_plural = "Уроки"
+        ordering =["number", "category"]
