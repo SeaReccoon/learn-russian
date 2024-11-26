@@ -15,7 +15,7 @@
 
             <div class="block-lessons">
                 {% for lesson in lessons %}
-                    <a href="" class="link">{{ lesson.title }}</a>
+                    <a href="{% url 'lesson' lesson.pk %}" class="link">{{ lesson.title }}</a>
                 {% endfor %}
             </div>
         </section>

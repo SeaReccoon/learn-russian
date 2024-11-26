@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/lessons/css/list.css">
+{% endblock %}
+
+{% block title %}
+    Learn-Russian. {{ lesson.category }}. {{ lesson.title }}
+{% endblock %}
+
+{% block aside %}
+    <aside>
+        <h2 class="title">{{ lesson.category }}</h2>
+
+        <div class="content-aside">
+            {% for l in other_lessons %}
+                <a href="{% url 'lesson' l.pk %}"
+                    class="title title_accent content-aside__element {% if l.pk == lesson.pk %} content-aside__element_active {% endif %}">
+                    {{ l.title }}
+                </a>  
+            {% endfor %}
+        </div>
+    </aside>
+{% endblock %}
+
+{% block content %}
+    <div class="lesson-date">Дата обновления: {{ lesson.date }}</div>
+    <h2 class="title">{{ lesson.title }}</h2>
+    {{ lesson.content|safe }}
+{% endblock %}
