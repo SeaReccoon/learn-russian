@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/lessons/css/list.css">
+{% endblock %}
+
+{% block title %}
+    Learn-Russian. Содержание
+{% endblock %}
+
+{% block content %}
+    {% for category, lessons in categories.items %}
+        <section class="topic">
+            <h2 class="title">{{ category }}</h2>
+
+            <div class="block-lessons">
+                {% for lesson in lessons %}
+                    <a href="" class="link">{{ lesson.title }}</a>
+                {% endfor %}
+            </div>
+        </section>
+    {% endfor %}
+{% endblock %}
