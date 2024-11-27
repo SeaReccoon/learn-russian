@@ -8,6 +8,11 @@
     Learn-Russian. {{ lesson.category }}. {{ lesson.title }}
 {% endblock %}
 
+{% block breadcrumb %}
+    <a href="{% url 'lessons_list' %}">/ Уроки</a>
+    <a href="{% url 'lesson' lesson.pk %}">/ {{ lesson.title }}</a>
+{% endblock %}
+
 {% block aside %}
     <aside>
         <h2 class="title">{{ lesson.category }}</h2>

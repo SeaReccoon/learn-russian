@@ -8,6 +8,10 @@
     Learn-Russian. Содержание
 {% endblock %}
 
+{% block breadcrumb %}
+    <a href="{% url 'lessons_list' %}">/ Уроки</a>
+{% endblock %}
+
 {% block content %}
     {% for category, lessons in categories.items %}
         <section class="topic">

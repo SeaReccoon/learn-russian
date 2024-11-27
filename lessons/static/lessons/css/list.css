@@ -1,6 +1,6 @@
 .topic {
     width: 700px;
-    margin-bottom: 3em;
+    margin: 1.5em 0;
     padding: 1em 3em;
     background-color: var(--bg-color);
     box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.2);
