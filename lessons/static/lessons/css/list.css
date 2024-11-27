@@ -14,3 +14,8 @@
 
     border-top: solid 2px var(--main-color);
 }
+
+.lesson-date {
+    margin: 1em 0;
+    text-align: right;
+}
