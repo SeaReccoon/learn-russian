@@ -28,3 +28,6 @@ class FeedbackView (LoginRequiredMixin, CreateView):
 
 class SuccessFeedback (TemplateView):
     template_name = "main/success_feedback.html"
+
+class AboutView (TemplateView):
+    template_name = "main/about.html"

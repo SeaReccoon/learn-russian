@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <style>
+        .mail {
+            padding: 2em 3em;
+            background-color: var(--bg-color);
+            border-radius: 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}
+    Learn-Russian. О проекте
+{% endblock %}
+
+{% block breadcrumb %}
+    <a href="{% url 'index' %}">/ О проекте</a>
+{% endblock %}
+
+{% block content %}
+    <h2 class="title title_page">О проекте</h2>
+    <p class="text">
+        Проект создан для быстрого и легкого изучения русского языка так и для школьников, так и для взрослых, что хотят освежить свои знания.
+        Сайт активно поддерживается и пополняется новыми материалами. Будем рады, если вы поделитесь своим мнение в форме обратной связи
+    </p>
+
+    <div class="block">
+        <p class="text">Если вы обнаружили баг, ошибку или опечатку, то мы будем благодарны, если вы сообщите на о нем</p>
+
+        <div class="mail">
+            <a href="mailto:learn.russian.feedback@gmail.com" class="link">learn.russian.feedback@gmail.com</a>
+        </div>
+    </div>
+{% endblock %}
