@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
     'main',
     'user',
-    'lessons'
+    'lessons',
+    'testing'
 ]
 
 MIDDLEWARE = [
