@@ -10,6 +10,7 @@
 
 {% block breadcrumb %}
     <a href="{% url 'lessons_list' %}">/ Уроки</a>
+    <a href="{% url 'lessons_list' %}">/ {{ lesson.category }}</a>
     <a href="{% url 'lesson' lesson.pk %}">/ {{ lesson.title }}</a>
 {% endblock %}
 
