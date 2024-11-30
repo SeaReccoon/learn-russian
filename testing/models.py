@@ -12,7 +12,7 @@ class Question(models.Model):
         verbose_name_plural = "Вопросы"
 
 class Answer(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name="Вопрос", related_name="questions")
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name="Вопрос", related_name="answers")
     answer = models.CharField("Ответ", max_length=150)
     is_correct = models.BooleanField("Правильный ответ", default=False)
 
