@@ -10,7 +10,7 @@
 
 {% block content %}
     {% for question in questions %}
-        <div class="question">
+        <div class="question" data-weight="{{ question.weight }}">
             <h2 class="title title_test">{{ question.question }}</h2>
             <form class="answer-options">
                 {% for answer in question.answers.all %}
@@ -20,7 +20,8 @@
                             value="{{ answer.answer }}"
                             name="{{ question.question }}"
                             id="{{ answer.pk }}"
-                            class="option__input">
+                            class="option__input answer"
+                            data-correct="{{ answer.is_correct }}">
                         <label for="{{ answer.pk }}" class="option__label">{{ answer.answer }}</label>
                     </div>
                 {% endfor %}
@@ -28,7 +29,22 @@
         </div>
     {% endfor %}
 
-    <div class="btns">
-        <button class="main-btn main-btn_center">Отправить</button>
+    <div class="panel-test">
+        <div class="btns">
+            <button class="main-btn main-btn_center check-btn">Отправить</button>
+        </div>
+
+        <div class="result-test">
+            <h2 class="title">Ваш результат:</h2>
+            <p class="title">
+                <span class="result-test__points current-points"></span>
+                /
+                <span class="result-test__points max-points"></span>
+            </p>
+        </div>
     </div>
+{% endblock %}
+
+{% block js %}
+    <script src="/static/testing/js/test.js"></script>
 {% endblock %}

@@ -43,7 +43,37 @@
     background-color: var(--accent-color) !important;
 }
 
+.question_lock .option__label:hover {
+    background-color: inherit;
+}
+
 .option__input:checked + .option__label {
-    background-color: var(--main-color);
+    background-color: var(--main-color) !important;
     color: white;
+}
+
+.option__input_correct + .option__label {
+    background-color: rgb(107, 178, 0) !important;
+    color: white;
+}
+
+.option__input_wrong + .option__label {
+    background-color: rgb(236, 145, 145) !important;
+}
+
+.result-test {
+    display: none;
+    padding: 1em 2em;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.result-test_active {
+    display: block;
+}
+
+.result-test__points {
+    font-weight: bold;
 }
