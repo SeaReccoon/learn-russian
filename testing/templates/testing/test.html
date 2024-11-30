@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/testing/css/test.css">
+{% endblock %}
+
+{% block title %}
+    Learn-Russian. Тест знаний
+{% endblock %}
+
+{% block content %}
+    {% for question in questions %}
+        <div class="question">
+            <h2 class="title title_test">{{ question.question }}</h2>
+            <form class="answer-options">
+                {% for answer in question.answers.all %}
+                    <div class="option">
+                        <input
+                            type="radio"
+                            value="{{ answer.answer }}"
+                            name="{{ question.question }}"
+                            id="{{ answer.pk }}"
+                            class="option__input">
+                        <label for="{{ answer.pk }}" class="option__label">{{ answer.answer }}</label>
+                    </div>
+                {% endfor %}
+            </form>
+        </div>
+    {% endfor %}
+
+    <div class="btns">
+        <button class="main-btn main-btn_center">Отправить</button>
+    </div>
+{% endblock %}
