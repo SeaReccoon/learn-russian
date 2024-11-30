@@ -1,0 +1,25 @@
+.lesson-date {
+    margin: 1em 0;
+    text-align: right;
+}
+
+figure {
+    width: 100% !important;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1180px) {
+    .content {
+        padding: 30px 50px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .content {
+        padding: 10px 20px;
+    }
+}

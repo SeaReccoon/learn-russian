@@ -1,0 +1,124 @@
+.gamb-menu {
+    display: none;
+}
+
+.ico-admin-btn {
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+    header {
+        gap: 30px;
+    }
+
+    .top-menu {
+        gap: 30px;
+    }
+
+    .auth {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .logo {
+        font-size: 24px;
+    }
+
+    .gamb-menu {
+        display: block;
+    }
+
+    .top-panel {
+        justify-content: flex-end;
+    }
+
+    .top-menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 0px;
+        height: calc(100vh - 60px);
+        padding-top: 2em;
+        white-space: nowrap;
+        z-index: 50;
+
+        overflow-x: hidden;
+
+        background-color: white;
+        box-shadow: 5px 0 5px -5px rgba(34, 60, 80, 0.3);
+
+        flex-direction: column;
+
+        transition: 200ms;
+    }
+
+    .top-menu_active {
+        width: 30vw;
+        padding-left: 3em;
+    }
+
+    aside {
+        min-width: 200px;
+        padding: 1.5em 1em;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .content {
+        padding: 30px 50px;
+    }
+
+    .topic {
+        width: 70vw;
+        margin: 1.5em 30px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .top-menu_active {
+        width: 50vw;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .window-form {
+        width: 100%;
+        padding: 10px 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .ico-admin-btn {
+        display: block;
+    }
+
+    .admin-btn {
+        display: none;
+    }
+
+    footer {
+        gap: 30px;
+    }
+
+    .bottom-menu {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .content {
+        padding: 10px 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .top-menu_active {
+        width: 70vw;
+    }
+}

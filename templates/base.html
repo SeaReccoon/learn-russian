@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css//forms.css">
+    <link rel="stylesheet" href="/static/css/forms.css">
+    <link rel="stylesheet" href="/static/css/media.css">
     {% block css %}{% endblock %}
     <title>
         {% block title %}{% endblock %}
@@ -12,6 +13,8 @@
 </head>
 <body>
     <header>
+        <img src="/static/img/menu.png" alt="menu" class="gamb-menu">
+
         <h1 class="logo">Learn-Russian</h1>
 
         <div class="top-panel">
@@ -25,7 +28,10 @@
             <div class="auth">
                 {% if user.is_authenticated %}
                     {% if user.is_staff %}
-                        <a href="/admin" class="add-btn">Панель админа</a>
+                        <a href="/admin" class="add-btn admin-btn">Панель админа</a>
+                        <a href="/admin" class="ico-admin-btn">
+                            <img src="/static/img/admin-panel.png" alt="admin">
+                        </a>
                     {% endif %}
 
                     <a href="{% url 'account' user.pk %}" class="btn-account">
@@ -62,6 +68,7 @@
         </main>
     </div>
     
+    <script src="/static/js/media.js"></script>
     {% block js %}{% endblock %}
 </body>
 </html>
