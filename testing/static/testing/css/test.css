@@ -12,6 +12,8 @@
     flex-direction: column;
 }
 
+/* Добавляем внутренюю тень на блок */
+/* Используем псевдоэлемент after, чтобы тень была поверх внутренних элементов блока */
 .answer-options::after {
     content: "";
     position: absolute;
@@ -24,10 +26,12 @@
     pointer-events: none;
 }
 
+/* Скрываем сам input radio */
 .option__input {
     display: none;
 }
 
+/* input будет выделятся после нажаятия на его label, которые можно очень легко стилизовать в отличие от input */
 .option__label {
     display: block;
     padding: 0.5em 2em;
@@ -35,32 +39,39 @@
     cursor: pointer;
 }
 
+/* Каждому четному ответу меняем фон для контраста с другими ответами */
 .option:nth-child(even) .option__label {
     background-color: var(--bg-color);
 }
 
+/* Подсвечиваем вопрос при наведении */
 .option__label:hover {
     background-color: var(--accent-color) !important;
 }
 
+/* Если вопрос заблокирован, то отключаем наведение у элементов */
 .question_lock .option__label:hover {
     background-color: inherit;
 }
 
+/* Если input отмечен, то меняем цвет его label */
 .option__input:checked + .option__label {
     background-color: var(--main-color) !important;
     color: white;
 }
 
+/* Правильный ответ */
 .option__input_correct + .option__label {
     background-color: rgb(107, 178, 0) !important;
     color: white;
 }
 
+/* Неправильный ответ */
 .option__input_wrong + .option__label {
     background-color: rgb(236, 145, 145) !important;
 }
 
+/* Результирующий блок */
 .result-test {
     display: none;
     padding: 1em 2em;

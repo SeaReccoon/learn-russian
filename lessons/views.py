@@ -6,6 +6,7 @@ class ListLessonsView(ListView):
     template_name = "lessons/list.html"
     context_object_name = "categories"
 
+    # Получаем уроки и группируем их по категориям
     def get_queryset(self):
         categories = {}
         lessons = Lesson.objects.all()
@@ -21,6 +22,7 @@ class LessonView(DetailView):
     template_name = "lessons/lesson.html"
     context_object_name = "lesson"
 
+    # Получаем все уроки из той же категории
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         obj = self.get_object()

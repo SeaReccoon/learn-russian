@@ -3,6 +3,8 @@
     text-align: right;
 }
 
+/* Растягиваем во всю ширину блока content изображения */
+/* По умолчанию ckeditor помещает изображения в тег figure */
 figure {
     width: 100% !important;
 }

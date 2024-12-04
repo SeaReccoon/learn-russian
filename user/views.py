@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LoginView
 from django.urls import reverse
 
+# Функция для получения аккаунта текущего пользователя, что находится в сессии
 def getCurrentAccount(request):
     if not request.user:
         return reverse('index')
@@ -12,6 +13,7 @@ def getCurrentAccount(request):
 class LoginAccountView(LoginView):
     template_name = "user/login.html"
 
+    # При успешном входе кидаем на личный кабинет пользователя
     def get_success_url(self):
         return getCurrentAccount(self.request)
 
@@ -20,6 +22,7 @@ class RegistrationView(CreateView):
     template_name = "user/registration.html"
     form_class = UserCreationForm
 
+    # После регистрации кидаем на страницу входа
     def get_success_url(self):
         return reverse("login")
 
@@ -28,6 +31,7 @@ class AccountView(DetailView):
     template_name = "user/account.html"
     context_object_name = 'user'
 
+    # Получаем поля, которые хотим отобразить в личном кабинете
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         user = self.get_object()
@@ -45,6 +49,7 @@ class UpdateAccountView(UpdateView):
     template_name = "user/update.html"
     fields = ["first_name", "last_name", "email"]
 
+    # При обновлении данных аккаунта перебрасываем в личный кабинет
     def get_success_url(self):
         return getCurrentAccount(self.request)
 

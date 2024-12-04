@@ -1,3 +1,4 @@
+// Настройка мобильной кнопки меню
 function initMedia() {
     let btn = document.querySelector(".gamb-menu")
     let menu = document.querySelector(".top-menu")

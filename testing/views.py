@@ -7,6 +7,7 @@ class QuestionsListView(ListView):
     template_name = "testing/test.html"
     context_object_name = "questions"
 
+    # Случайным образом мешаем вопросы
     def get_queryset(self):
         questions = Question.objects.all()
         random.shuffle(list(questions))
